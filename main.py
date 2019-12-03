@@ -7,8 +7,9 @@ delay = 300.0
 
 
 def check_if_working():
+    # Check if Visual Studio Code is running
     if "code" in (p.name() for p in psutil.process_iter()):
-        print("The poor human being is working. Leave him be.")
+        print("The user is working. Leave it be.")
     else:
         os.system('code && notify-send "GET BACK TO WORK"')
 
